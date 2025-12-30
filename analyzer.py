@@ -86,6 +86,7 @@ def pattern_penalty(password: str,lenght: int, has_upper: bool, has_numbers: boo
     return penalty
 
 def label_from_score(score: int) -> str:
+    print("Parola este una:")
     if score >= 80:
         return "FOARTE PUTERNICA"
     if score >= 60:

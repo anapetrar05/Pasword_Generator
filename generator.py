@@ -4,6 +4,9 @@ import secrets
 def generator_passowrd(lenght, use_uper, use_special, use_numbers):
     categories=[string.ascii_lowercase] #lista de seturi de caractere 
 
+    if not categories:
+        raise ValueError("Nu a fost selectata nicio categorie de caractere.")
+
     if use_uper:
         categories.append(string.ascii_uppercase) #adaugi la lista  cu append
     if use_special:

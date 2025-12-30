@@ -10,7 +10,7 @@ def main():
         if "view" in args:
             entries=load_history()
             if not entries:
-             print("Istoric gol!")
+             print("Nu au fost salvate parole in istoric.")
             else:
                 print("Istoric parole cele mai recente:")
                 for e in entries:

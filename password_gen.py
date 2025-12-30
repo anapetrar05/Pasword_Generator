@@ -4,7 +4,6 @@ from analyzer import analyzer_password, label_from_score,problem_and_sugetion,pa
 from hystory import load_history,save_password_to_history
 from memorable import generate_memorable
 def main():
-    #print("Programul a pornit!");
     args =sys.argv[1:]
     if "--history" in args:  #daca este in lista o analizam altfel o generam
         print("Mod ISTORIC")
@@ -86,7 +85,7 @@ def main():
        
         parola= generator_passowrd(lenght, use_uper, use_special,use_numbers)
         print("Parola generata:", parola)
-        save_password_to_history(parola, {
+        save_password_to_history(parola, { # apelam functia cu parametri parola si dictionarul cu toate specificatile parolei
         "length": lenght,
         "upper": use_uper,
         "numbers": use_numbers,

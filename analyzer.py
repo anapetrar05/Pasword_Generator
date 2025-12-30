@@ -3,9 +3,8 @@ import math
 import re
 SPECIALS = "!@#$%^&*()-_=+[]{};:,.?/"
 
-# scorul numeric calculat in functie de cat este de complexa parola cat ii de securizata 
-
-
+#scorul parolei bazat pe entropie calculat - penalizari pentru tipare slabe
+#entropia se calculeaza folosind formula: Entropie = L * log2(N)
 def analyzer_password(password=str )->dict: #returneaza un dictionar 
     #detectam tipurile de caractere 
     has_lower= any(c in string.ascii_lowercase for c in password)

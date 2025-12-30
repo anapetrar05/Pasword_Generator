@@ -12,8 +12,8 @@ def generator_passowrd(lenght, use_uper, use_special, use_numbers):
         categories.append(string.digits)
 
 
-    if lenght<=0:
-        raise ValueError("Lungimea trebuie sa fie mai mare decat 0")
+    if lenght <10:
+        raise ValueError("Lungimea trebuie sa fie minim de 10 caractere")
     if lenght < len(categories):
         raise ValueError("Lungimea trebuie sa fie minima de {len(categories)}")
     poll="".join(categories)

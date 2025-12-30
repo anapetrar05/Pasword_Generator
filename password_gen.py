@@ -19,7 +19,7 @@ def main():
             print("Foloseste --history view")
     elif "--memorable" in args:
         print("Mod PAROLA MEMORABILA")
-        words=3
+        words=3 # daca nu specifici numarul de cuvinte o sa fie 3
         if "--words" in args: # dupa --words pui numarul de cuvinte 
             i=args.index("--words")
             words = int(args[i+1])

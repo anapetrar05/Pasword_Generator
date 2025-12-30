@@ -31,12 +31,12 @@ def analyzer_password(password=str )->dict: #returneaza un dictionar
         entropy_bits=lenght * math.log2(pool_size)
 
         # scor "teoretic" din entropie (0-100)
-    base_score = int(min(100, round(entropy_bits)))
+    base_score = float(min(100, round(entropy_bits)))
 
     # penalizari pentru tipare slabe (scor "practic")
     penalty = pattern_penalty(password,lenght, has_upper, has_numbers, has_special)
     final_score = max(10, min(100, base_score - penalty))
-
+    final_score = round(final_score)
 
 
     return { # returnam tot intr-un dictionar

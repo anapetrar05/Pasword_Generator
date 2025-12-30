@@ -1,6 +1,6 @@
 import string  # un modul python special pentru parole tokenuri si securitate
 import secrets
-
+# Functie pentru generarea parolelorsecurizatre folosind random sigur 
 def generator_passowrd(lenght, use_uper, use_special, use_numbers):
     categories=[string.ascii_lowercase] #lista de seturi de caractere 
 

@@ -1,3 +1,4 @@
+from itertools import count
 import sys
 from generator import generator_passowrd
 from analyzer import analyzer_password, label_from_score,problem_and_sugetion,pattern_penalty
@@ -34,7 +35,8 @@ def main():
         print("Mod ANALIZA Parola")
 
         index= args.index ("--check")
-        parola= words=3
+        parola= args[index +1]  
+        words=3
         if "--words" in args:
             args[index +1]
         
@@ -69,7 +71,28 @@ def main():
 
 
     elif "--batch" in args:
-        print ("Mod Generare Batch")
+        print("Mod Generare Batch")
+      # generam mai multe  parole cu anumite specificatii
+    # 1) cate parole generam
+    i = args.index("--batch")
+    count = int(args[i + 1])
+
+    # 2) lungime (aceeasi logica ca la generate)
+    lenght = 10
+    if "--lenght" in args:
+        j = args.index("--lenght")
+        lenght = int(args[j + 1])
+
+    # 3) flaguri
+    use_uper = "--uper" in args
+    use_numbers = "--numbers" in args
+    use_special = "--special" in args
+
+    # 4) generam "count" parole
+    for k in range(count):
+        parola = generator_passowrd(lenght, use_uper, use_special, use_numbers)
+        print(f"{k+1}. {parola}")
+
     else :
         print("Mod GENERARE Parola (implicit)")
         lenght=10
@@ -98,4 +121,4 @@ print("Salvata in istoric criptat (base64).")
 
 
 if __name__ == "__main__":
- main()
+    main()

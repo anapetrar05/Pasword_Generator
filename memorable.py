@@ -1,4 +1,5 @@
 import secrets
+# Generator de parole memorabile folosind cuvinte aleatorii
 
 DEFAULT_WORDS=["lup","cer","casa","masa","copil","inger","craciun","facultate","clase","obiecte","pisica","caine","inginer"]
 def generate_memorable(words_count: int=3,separator: str="-"): 

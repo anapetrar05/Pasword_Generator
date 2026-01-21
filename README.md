@@ -34,16 +34,16 @@ argumente CLI, modularizare și containerizare Docker.
 
 ---
 ```bash
-## 🔹 Mod generare batch parole
+🔹 Mod generare batch parole
 
 Acest mod permite generarea mai multor parole într-o singură rulare a aplicației.
 Este util atunci când este necesar un set de parole pentru mai mulți utilizatori
 sau pentru testare. (Mod în curs de dezvoltare)
 
-### Comandă:
-```bash
+Comandă:
+
 python password_gen.py --batch
-### Output:
+Output:
 Batch password generation started
 
 Number of passwords to generate: 5
@@ -56,17 +56,16 @@ Password length: 12
 [5] L@M8P!2Rk#QZ
 
 All passwords generated successfully.
-
-## 🔹 Mod vizualizare istoric parole
+ 🔹 Mod vizualizare istoric parole
 
 Acest mod afișează istoricul parolelor generate anterior.
 Parolele sunt salvate într-un fișier criptat folosind codare Base64
 și sunt afișate împreună cu data generării.
 
-### Comandă:
-```bash
+ Comandă:
+
 python password_gen.py --history view
-## Outupt:
+Outupt:
 Password history (Base64 encoded):
 
 [2026-01-08 16:41]
@@ -79,17 +78,16 @@ U2VjdXJlUEBzczEyMw==
 QDNmU3Ryb25nIVBA
 
 Total passwords stored: 3
-
-## 🔹 Mod generare parolă memorabilă
+🔹 Mod generare parolă memorabilă
 
 Acest mod generează o parolă ușor de reținut, formată din mai multe cuvinte
 separate printr-un caracter implicit. Numărul de cuvinte poate fi configurat
 de utilizator.
 
-### Comandă:
-```bash
+
+
 python password_gen.py --memorable --words 4
-### Output:
+
 Generated memorable password:
 forest-horizon-cloud-matrix
 
@@ -97,16 +95,16 @@ Password strength score: 76/100
 Entropy: 4.63 bits
 Status: Acceptable password
 
-## 🔹 Mod verificare parolă
+🔹 Mod verificare parolă
 
 Acest mod permite analizarea unei parole introduse de utilizator.
 Aplicația calculează scorul de securitate, entropia, penalizările
 și oferă sugestii pentru îmbunătățirea parolei.
 
-### Comandă:
-```bash
+ Comandă:
+
 python password_gen.py --check "Parola123!"
-###Output:
+Output:
 Password analyzed: Parola123!
 
 Length: 10
@@ -123,22 +121,22 @@ Suggestions:
 - Increase password length
 - Avoid common words
 
-## 🔹 Mod rulare implicit
+🔹 Mod rulare implicit
 
 Acest mod este utilizat atunci când aplicația este rulată fără niciun argument
 din linia de comandă. Programul generează automat o parolă folosind
 setările implicite.
 
-### Comandă:
-```bash
+Comandă:
+
 python password_gen.py
-###Output:
+Output:
 Generated password: A9f!kP3@Lm2
 Password strength score: 82/100
 Entropy: 5.12 bits
 Status: Strong password
 
-## Tehnologii folosite
+
 
 - **Limbaj:** Python 3.10  
 - **Biblioteci:**
@@ -148,28 +146,25 @@ Status: Strong password
   - `base64` – criptare istoric parole
 - **Tools:** Git, Docker, GitHub
 
----
 
-## Cerințe sistem
+ Cerințe sistem
 
 - Python 3.10+
 - Sistem de operare: Windows / Linux / macOS
 - Docker (opțional, pentru rulare containerizată)
 
----
 
-## Instalare
 
-```bash
-# Clone repository
+
+Clone repository
 git clone https://github.com/anamaria2005/password-gen.git
 cd password-gen
 
-## Instalare (Docker)
+Instalare (Docker)
 
 Pentru rularea aplicației folosind Docker, este necesar să descărcați imaginea din Docker Hub:
 
-```bash
+
 docker pull anamaria2005/password-gen:latest
 Pentru rulare:
 docker run --rm anamaria2005/password-gen:latest 

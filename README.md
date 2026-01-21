@@ -33,7 +33,7 @@ argumente CLI, modularizare și containerizare Docker.
 ## Moduri de rulare
 
 ---
-
+```bash
 ## 🔹 Mod generare batch parole
 
 Acest mod permite generarea mai multor parole într-o singură rulare a aplicației.

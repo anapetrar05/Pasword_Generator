@@ -34,10 +34,6 @@ argumente CLI, modularizare și containerizare Docker.
 
 ---
 
-
-
-```bash
-
 ## 🔹 Mod generare batch parole
 
 Acest mod permite generarea mai multor parole într-o singură rulare a aplicației.
@@ -47,6 +43,19 @@ sau pentru testare. (Mod în curs de dezvoltare)
 ### Comandă:
 ```bash
 python password_gen.py --batch
+### Output:
+Batch password generation started
+
+Number of passwords to generate: 5
+Password length: 12
+
+[1] 9F@kP2!LmQx#
+[2] R7$wZ1!AqM8%
+[3] Tm4#P!8RkQ2@
+[4] Z!3QkM9P$wA2
+[5] L@M8P!2Rk#QZ
+
+All passwords generated successfully.
 
 ## 🔹 Mod vizualizare istoric parole
 
@@ -57,6 +66,20 @@ Parolele sunt salvate într-un fișier criptat folosind codare Base64
 ### Comandă:
 ```bash
 python password_gen.py --history view
+## Outupt:
+Password history (Base64 encoded):
+
+[2026-01-08 16:41]
+QWJjQDEyMyFAIw==
+
+[2026-01-09 10:22]
+U2VjdXJlUEBzczEyMw==
+
+[2026-01-11 19:05]
+QDNmU3Ryb25nIVBA
+
+Total passwords stored: 3
+
 ## 🔹 Mod generare parolă memorabilă
 
 Acest mod generează o parolă ușor de reținut, formată din mai multe cuvinte
@@ -66,6 +89,14 @@ de utilizator.
 ### Comandă:
 ```bash
 python password_gen.py --memorable --words 4
+### Output:
+Generated memorable password:
+forest-horizon-cloud-matrix
+
+Password strength score: 76/100
+Entropy: 4.63 bits
+Status: Acceptable password
+
 ## 🔹 Mod verificare parolă
 
 Acest mod permite analizarea unei parole introduse de utilizator.
@@ -75,6 +106,23 @@ Aplicația calculează scorul de securitate, entropia, penalizările
 ### Comandă:
 ```bash
 python password_gen.py --check "Parola123!"
+###Output:
+Password analyzed: Parola123!
+
+Length: 10
+Contains uppercase letters: Yes
+Contains lowercase letters: Yes
+Contains digits: Yes
+Contains special characters: Yes
+
+Entropy: 3.21 bits
+Security score: 58/100
+Status: Weak password
+
+Suggestions:
+- Increase password length
+- Avoid common words
+
 ## 🔹 Mod rulare implicit
 
 Acest mod este utilizat atunci când aplicația este rulată fără niciun argument
@@ -84,6 +132,11 @@ setările implicite.
 ### Comandă:
 ```bash
 python password_gen.py
+###Output:
+Generated password: A9f!kP3@Lm2
+Password strength score: 82/100
+Entropy: 5.12 bits
+Status: Strong password
 
 ## Tehnologii folosite
 

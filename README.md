@@ -40,10 +40,10 @@ Acest mod permite generarea mai multor parole într-o singură rulare a aplicaț
 Este util atunci când este necesar un set de parole pentru mai mulți utilizatori
 sau pentru testare. (Mod în curs de dezvoltare)
 
-Comandă:
+ Comandă:
 
 python password_gen.py --batch
-Output:
+ Output:
 Batch password generation started
 
 Number of passwords to generate: 5
@@ -65,7 +65,7 @@ Parolele sunt salvate într-un fișier criptat folosind codare Base64
  Comandă:
 
 python password_gen.py --history view
-Outupt:
+  Outupt:
 Password history (Base64 encoded):
 
 [2026-01-08 16:41]
@@ -85,9 +85,9 @@ separate printr-un caracter implicit. Numărul de cuvinte poate fi configurat
 de utilizator.
 
 
-
+ Comanda:
 python password_gen.py --memorable --words 4
-
+ Output:
 Generated memorable password:
 forest-horizon-cloud-matrix
 

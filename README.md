@@ -47,6 +47,7 @@ sau pentru testare. (Mod în curs de dezvoltare)
 ### Comandă:
 ```bash
 python password_gen.py --batch
+
 ## 🔹 Mod vizualizare istoric parole
 
 Acest mod afișează istoricul parolelor generate anterior.

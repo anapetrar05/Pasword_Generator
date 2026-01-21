@@ -53,7 +53,7 @@ argumente CLI, modularizare și containerizare Docker.
 
 ## Instalare
 
-```bash
+
 # Clone repository
 git clone https://github.com/anamaria2005/password-gen.git
 cd password-gen
@@ -62,7 +62,6 @@ cd password-gen
 
 Pentru rularea aplicației folosind Docker, este necesar să descărcați imaginea din Docker Hub:
 
-```bash
 docker pull anamaria2005/password-gen:latest
 Pentru rulare:
 docker run --rm anamaria2005/password-gen:latest 

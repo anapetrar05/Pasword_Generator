@@ -34,14 +34,10 @@ argumente CLI, modularizare și containerizare Docker.
 
 ---
 
-## 🔹 Mod parolă implicit
 
-Acest mod este activat atunci când aplicația este rulată fără niciun argument.
-Programul generează o parolă aleatorie folosind setările implicite.
 
-### Comandă:
 ```bash
-python password_gen.py
+
 ## 🔹 Mod generare batch parole
 
 Acest mod permite generarea mai multor parole într-o singură rulare a aplicației.
